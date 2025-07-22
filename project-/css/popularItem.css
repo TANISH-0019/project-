@@ -1,0 +1,228 @@
+/* General carousel container */
+.carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5%;
+    position: relative;
+    z-index: 6;
+}
+
+.popular-item {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.carousel-container div {
+    display: flex 1;
+    gap: 20px;
+}
+
+#carousel-card-details-flex {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 10px;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        gap: 45px;
+    }
+}
+
+
+.slick-carousel {
+    width: 76%;
+    margin: 0 auto;
+}
+
+/* Custom navigation buttons */
+.carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 88%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-nav-button {
+    background-color: #e0f7e6;
+    border: 1px solid #28a745;
+    border-radius: 50%;
+    color: #28a745;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.prev-button {
+    margin-left: -8px;
+}
+
+.next-button {
+    margin-right: -20px;
+}
+
+/* Slick carousel card styles */
+.carousel-card {
+    width: 100%;
+    max-width: 250px;
+    height: 265px;
+    max-height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    /* relative positioning to allow absolute child */
+    text-align: center;
+    background: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.carousel-card:hover {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.carousel-card-image {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    display: relative;
+    object-fit: cover;
+}
+
+.carousel-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-discount-badge {
+    position: absolute;
+    width: fit-content;
+    top: 10px;
+    left: 10px;
+    background-color: var(--accent-yellow);
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Card content styles */
+.carousel-card-content {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-card-title {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.carousel-card-price {
+    font-size: 14px;
+    color: #000000;
+    margin: 5px 0;
+}
+
+
+.carousel-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.carousel-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.carousel-card-add i {
+    background-color: #ffc107;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#carousel-card-add-width {
+    width: fit-content;
+}
+
+.carousel-card-add {
+    width: fit-content;
+}
+
+.slick-prev,
+.slick-next {
+    display: none;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    color: #28a745;
+}
+
+.request-dish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.request-dish-btn {
+    padding: 10px 35px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        width: 92%;
+        max-width: 240px;
+    }
+
+    .slick-carousel {
+        gap: 20px;
+    }
+}

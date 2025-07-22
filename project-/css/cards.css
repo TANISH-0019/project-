@@ -1,0 +1,161 @@
+@import url("./variables.css");
+
+.food-section {
+    width: 100%;
+    margin: 4% auto 4% auto;
+    padding: 20px 5%;
+    display: flex 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-section div h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    /* width: 1180px; */
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    /* max-width: 277px; */
+    height: 342px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    display: flex 1;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: fit-content;
+    background-color: var(--accent-yellow);
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-title {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.card-price {
+    font-size: 16px;
+    color: #000000;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-details :first-child {
+    display: flex;
+    gap: 10px;
+
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #1B1C21;
+}
+
+.card-rating i {
+    color: #1B1C21;
+}
+
+.card-add i {
+    background-color: var(--accent-yellow);
+    padding: 3px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-time {
+    color: #1B1C21;
+    padding: 1px 3px;
+    border-radius: 5px;
+    border-left: 3px solid #BEBEBE;
+    border-right: 3px solid #BEBEBE;
+}
+
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* width: 880px; */
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* width: 580px; */
+        gap: 30px;
+        justify-items: center;
+    }
+    
+    .food-section div h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 670px) {
+    .food-section div h2 {
+        text-align: center;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
